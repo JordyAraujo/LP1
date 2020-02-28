@@ -12,25 +12,30 @@ void Turma::setIdentificacao(string id){
 string Turma::getIdentificacao(){
     return identificacao;
 }
-void Turma::addAluno(){
-    string nomeTemp, loginTemp;
-    int matTemp, semTemp, noTemp;
-    cout << "Digite o nome do aluno: ";
-    cin >> nomeTemp;
-    alunos[quantAlunos].setNome(nomeTemp);
-    cout << "Digite o login do aluno: ";
-    cin >> loginTemp;
-    alunos[quantAlunos].setLogin(loginTemp);
-    cout << "Digite a matrícula do aluno: ";
-    cin >> matTemp;
-    alunos[quantAlunos].setMatricula(matTemp);
-    cout << "Digite o semestre do aluno: ";
-    cin >> semTemp;
-    alunos[quantAlunos].setSemestre(semTemp);
-    cout << "Digite a nota do aluno: ";
-    cin >> noTemp;
-    alunos[quantAlunos].setNota(noTemp);
-    quantAlunos++;
+void Turma::addAluno(int pos){
+    if(!alunos[pos].preenchido){
+        string nomeTemp, loginTemp;
+        int matTemp, semTemp, noTemp;
+        cout << "Digite o nome do aluno: ";
+        cin >> nomeTemp;
+        alunos[pos].setNome(nomeTemp);
+        cout << "Digite o login do aluno: ";
+        cin >> loginTemp;
+        alunos[pos].setLogin(loginTemp);
+        cout << "Digite a matrícula do aluno: ";
+        cin >> matTemp;
+        alunos[pos].setMatricula(matTemp);
+        cout << "Digite o semestre do aluno: ";
+        cin >> semTemp;
+        alunos[pos].setSemestre(semTemp);
+        cout << "Digite a nota do aluno: ";
+        cin >> noTemp;
+        alunos[pos].setNota(noTemp);
+        quantAlunos++;
+        alunos[pos].preenchido = true;
+    } else {
+        cout << "Posição preenchida!" << endl;
+    }
 }
 void Turma::printAlunos(){
     if(quantAlunos == 0){
@@ -42,8 +47,12 @@ void Turma::printAlunos(){
         }
     }
 }
-void deleteAluno(int m){
-    
+void Turma::deleteAluno(int m){
+    if(alunos[pos].preenchido){
+        alunos[pos].preenchido = false;
+    } else {
+        cout << "Posição não preenchida!" << endl;
+    }
 }
 int Aluno::getMatricula() {
     return matricula;

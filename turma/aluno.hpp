@@ -4,12 +4,15 @@
 using namespace std;
 
 class Aluno{
+
     private:
         string nome, login;
-        int matricula, semestre, nota;
+        int identificacao, semestre, nota;
+        bool preenchido = false;
+        
     public:
-        int getMatricula();
-        void setMatricula(int m);
+        int getID();
+        void setID(int i);
         int getSemestre();
         void setSemestre(int s);
         int getNota();
