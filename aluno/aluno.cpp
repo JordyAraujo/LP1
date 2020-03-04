@@ -1,52 +1,51 @@
 #include "aluno.hpp"
 
-int Aluno::getMatricula() {
+string Aluno::getMatricula() {
     return matricula;
 }
-void Aluno::setMatricula(int m) {
+void Aluno::setMatricula(string m) {
     matricula = m;
 }
 
-int Aluno::getSemestre() {
-    return semestre;
+string Aluno::getContato() {
+    return contato;
 }
-void Aluno::setSemestre(int s) {
-    semestre = s;
+void Aluno::setContato(string c) {
+    contato = c;
 }
 
-int Aluno::getNota() {
-    return nota;
+string Aluno::getEndereco() {
+    return endereco;
 }
-void Aluno::setNota(int N) {
-    nota = N;
+void Aluno::setEndereco(string e) {
+    endereco = e;
 }
 
 string Aluno::getNome() {
     return nome;
 }
-void Aluno::setNome(string no) {
-    nome = no;
+void Aluno::setNome(string n) {
+    nome = n;
 }
 
-string Aluno::getLogin() {
-    return login;
+short Aluno::getIdade() {
+    return idade;
 }
-void Aluno::setLogin(string lo) {
-    login = lo;
+void Aluno::setIdade(short i) {
+    idade = i;
 }
 
 int main(){
     Aluno aluno;
-    aluno.setMatricula(2020000000);
+    aluno.setMatricula("2020000000");
     cout << "Matrícula = " << aluno.getMatricula() << endl;
-    aluno.setSemestre(3);
-    cout << "Semestre = " << aluno.getSemestre() << endl;
-    aluno.setNota(8);
-    cout << "Nota = " << aluno.getNota() << endl;
+    aluno.setContato("(99) 9 8888-4444");
+    cout << "Contato = " << aluno.getContato() << endl;
+    aluno.setEndereco("Rua X");
+    cout << "Endereco = " << aluno.getEndereco() << endl;
     aluno.setNome("Fulano");
     cout << "Nome = " << aluno.getNome() << endl;
-    aluno.setLogin("fulano");
-    string teste = aluno.getLogin();
-    cout << "Login = " << teste << endl;
+    aluno.setIdade(18);
+    cout << "Idade = " << aluno.getIdade() << endl;
     return 0;
 }

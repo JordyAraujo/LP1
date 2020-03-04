@@ -1,43 +1,54 @@
+// Falta função pra get o aluno de acordo com o indice fornecido
+
 #include "turma.hpp"
 
-void Turma::setNome(string no){
-    nome = no;
+void Turma::setDescricao(string d){
+    descricao = d;
 }
-string Turma::getNome(){
-    return nome;
+string Turma::getDescricao(){
+    return descricao;
 }
-void Turma::setIdentificacao(string id){
-    identificacao = id;
+void Turma::setCodigo(string c){
+    codigo = c;
 }
-string Turma::getIdentificacao(){
-    return identificacao;
+string Turma::getCodigo(){
+    return codigo;
 }
-void Turma::addAluno(int pos){
-    if(!alunos[pos].preenchido){
-        string nomeTemp, loginTemp;
-        int matTemp, semTemp, noTemp;
-        cout << "Digite o nome do aluno: ";
-        cin >> nomeTemp;
-        alunos[pos].setNome(nomeTemp);
-        cout << "Digite o login do aluno: ";
-        cin >> loginTemp;
-        alunos[pos].setLogin(loginTemp);
-        cout << "Digite a matrícula do aluno: ";
-        cin >> matTemp;
-        alunos[pos].setMatricula(matTemp);
-        cout << "Digite o semestre do aluno: ";
-        cin >> semTemp;
-        alunos[pos].setSemestre(semTemp);
-        cout << "Digite a nota do aluno: ";
-        cin >> noTemp;
-        alunos[pos].setNota(noTemp);
-        quantAlunos++;
-        alunos[pos].preenchido = true;
-    } else {
-        cout << "Posição preenchida!" << endl;
+short Turma::getQuantAlunos(){
+    return quantAlunos;
+}
+void Turma::setCapacidade(short cap){
+    capacidade = cap;
+    participantes = new Aluno[cap];
+}
+short Turma::getCapacidade(){
+    return capacidade;
+}
+void Turma::addAluno(Aluno umAluno){
+    if(quantAlunos < capacidade){
+        participantes[quantAlunos++] = umAluno;
     }
+    /* string nomeTemp, loginTemp;
+    int matTemp, semTemp, noTemp;
+    cout << "Digite o nome do aluno: ";
+    cin >> nomeTemp;
+    alunos[pos].setNome(nomeTemp);
+    cout << "Digite o login do aluno: ";
+    cin >> loginTemp;
+    alunos[pos].setLogin(loginTemp);
+    cout << "Digite a matrícula do aluno: ";
+    cin >> matTemp;
+    alunos[pos].setMatricula(matTemp);
+    cout << "Digite o semestre do aluno: ";
+    cin >> semTemp;
+    alunos[pos].setSemestre(semTemp);
+    cout << "Digite a nota do aluno: ";
+    cin >> noTemp;
+    alunos[pos].setNota(noTemp);
+    quantAlunos++;
+    alunos[pos].preenchido = true; */
 }
-void Turma::printAlunos(){
+/* void Turma::printAlunos(){
     if(quantAlunos == 0){
         cout << "Não há alunos na turma" << endl;
     } else if (quantAlunos < 0){
@@ -54,53 +65,52 @@ void Turma::deleteAluno(int m){
         cout << "Posição não preenchida!" << endl;
     }
 }
-int Aluno::getMatricula() {
+string Aluno::getMatricula() {
     return matricula;
 }
-void Aluno::setMatricula(int m) {
+void Aluno::setMatricula(string m) {
     matricula = m;
 }
 
-int Aluno::getSemestre() {
-    return semestre;
+string Aluno::getContato() {
+    return contato;
 }
-void Aluno::setSemestre(int s) {
-    semestre = s;
+void Aluno::setContato(string c) {
+    contato = c;
 }
 
-int Aluno::getNota() {
-    return nota;
+string Aluno::getEndereco() {
+    return endereco;
 }
-void Aluno::setNota(int N) {
-    nota = N;
+void Aluno::setEndereco(string e) {
+    endereco = e;
 }
 
 string Aluno::getNome() {
     return nome;
 }
-void Aluno::setNome(string no) {
-    nome = no;
+void Aluno::setNome(string n) {
+    nome = n;
 }
 
-string Aluno::getLogin() {
-    return login;
+short Aluno::getIdade() {
+    return idade;
 }
-void Aluno::setLogin(string lo) {
-    login = lo;
+void Aluno::setIdade(short i) {
+    idade = i;
 }
 
 int main(){
     Aluno aluno;
     aluno.setMatricula(2020000000);
     cout << "Matrícula = " << aluno.getMatricula() << endl;
-    aluno.setSemestre(3);
-    cout << "Semestre = " << aluno.getSemestre() << endl;
-    aluno.setNota(8);
-    cout << "Nota = " << aluno.getNota() << endl;
+    aluno.setContato("(99) 9 9999-3333");
+    cout << "Contato = " << aluno.getContato() << endl;
+    aluno.setEndereco("Rua X");
+    cout << "Endereço = " << aluno.getEndereco() << endl;
     aluno.setNome("Fulano");
     cout << "Nome = " << aluno.getNome() << endl;
-    aluno.setLogin("fulano");
-    string teste = aluno.getLogin();
-    cout << "Login = " << teste << endl;
+    aluno.setIdade(18);
+    cout << "Idade = " << aluno.getIdade() << endl;
     return 0;
-}
+}*/

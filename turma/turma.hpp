@@ -2,16 +2,19 @@
 
 class Turma{
     private:
-        string nome, identificacao;
-        Aluno alunos[100];
-        int quantAlunos = 0;
+        string descricao, codigo;
+        Aluno* participantes;
+        short capacidade;
+        short quantAlunos = 0;
     public:
-        void setNome(string nom);
-        string getNome();
-        void setIdentificacao(string ident);
-        string getIdentificacao();
-        void addAluno(int p);
-        void printAlunos();
-        void deleteAluno(int mat);
-        int getQuantAlunos();
+        void setDescricao(string d);
+        string getDescricao();
+        void setCodigo(string c);
+        string getCodigo();
+        void setCapacidade(short cap);
+        short getCapacidade();
+        void addAluno(Aluno umAluno);
+/*         void printAlunos();
+        void deleteAluno(int m); */
+        short getQuantAlunos();
 };

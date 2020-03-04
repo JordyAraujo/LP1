@@ -5,17 +5,17 @@ using namespace std;
 
 class Aluno{
     private:
-        string nome, login;
-        int matricula, semestre, nota;
+        string matricula, nome, contato, endereco;
+        short idade;
     public:
-        int getMatricula();
-        void setMatricula(int m);
-        int getSemestre();
-        void setSemestre(int s);
-        int getNota();
-        void setNota(int N);
+        string getMatricula();
+        void setMatricula(string m);
+        string getContato();
+        void setContato(string c);
+        string getEndereco();
+        void setEndereco(string e);
         string getNome();
-        void setNome(string nome);
-        string getLogin();
-        void setLogin(string login);
+        void setNome(string n);
+        short getIdade();
+        void setIdade(short i);
 };
