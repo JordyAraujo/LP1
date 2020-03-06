@@ -1,5 +1,14 @@
 #include "aluno.hpp"
 
+Aluno::Aluno(){
+    matricula = "Não Informada";
+    nome = "Não Informado";
+    contato = "Não Informado";
+    endereco = "Não Informado";
+    nome = "Não Informado";
+    idade = 0;
+}
+
 string Aluno::getMatricula() {
     return matricula;
 }
@@ -34,18 +43,3 @@ short Aluno::getIdade() {
 void Aluno::setIdade(short i) {
     idade = i;
 }
-
-/* int main(){
-    Aluno aluno;
-    aluno.setMatricula("2020000000");
-    cout << "Matrícula = " << aluno.getMatricula() << endl;
-    aluno.setContato("(99) 9 8888-4444");
-    cout << "Contato = " << aluno.getContato() << endl;
-    aluno.setEndereco("Rua X");
-    cout << "Endereco = " << aluno.getEndereco() << endl;
-    aluno.setNome("Fulano");
-    cout << "Nome = " << aluno.getNome() << endl;
-    aluno.setIdade(18);
-    cout << "Idade = " << aluno.getIdade() << endl;
-    return 0;
-} */

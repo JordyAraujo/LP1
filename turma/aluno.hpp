@@ -17,4 +17,5 @@ class Aluno{
         void setNome(string n);
         short getIdade();
         void setIdade(short i);
+        Aluno();
 };

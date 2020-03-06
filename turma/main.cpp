@@ -2,7 +2,8 @@
 
 int main(){
 	
-	Turma turma;
+	Turma turma1;
+	Turma turma2(1);
 	Aluno aluno1;
 	Aluno aluno2;
 
@@ -18,16 +19,26 @@ int main(){
     aluno2.setNome("Beltrano");
     aluno2.setIdade(18);
 
-	turma.setCodigo("IMD0030");
-	turma.setDescricao("LP1");
-	turma.setCapacidade(30);
-	turma.addAluno(aluno1);
-	turma.addAluno(aluno2);
+	turma1.setCodigo("IMD0030");
+	turma1.setDescricao("LP1");
+	turma1.setCapacidade(30);
+	turma1.addAluno(aluno1);
+	turma1.addAluno(aluno2);
 
-	cout << "Código da Turma = " << turma.getCodigo() << endl;
-	cout << "Quantidade de Alunos = " << turma.getQuantAlunos() << endl;
+	cout << "Código da Turma = " << turma1.getCodigo() << endl;
+	cout << "Quantidade de Alunos = " << turma1.getQuantAlunos() << endl;
 
-	cout << "Nome do Primeiro Aluno = " << turma.
+	turma1.listaAlunos();
+
+	turma2.setCodigo("IMD1030");
+	turma2.setDescricao("LP2");
+	turma2.addAluno(aluno1);
+	turma2.addAluno(aluno2);
+
+	cout << "Código da Turma = " << turma2.getCodigo() << endl;
+	cout << "Quantidade de Alunos = " << turma2.getQuantAlunos() << endl;
+
+	turma2.listaAlunos();
 
 	return 0;
 }

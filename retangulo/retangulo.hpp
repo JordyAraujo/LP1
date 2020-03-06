@@ -10,7 +10,9 @@ class Retangulo {
 		
 	public:
 		int getLargura();
-		void setLargura(int l);
+		void setLargura(int);
 		int getAltura();
-		void setAltura(int a);
+		void setAltura(int);
+		Retangulo();
+		Retangulo(int, int);
 };

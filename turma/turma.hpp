@@ -5,16 +5,19 @@ class Turma{
         string descricao, codigo;
         Aluno* participantes;
         short capacidade;
-        short quantAlunos = 0;
+        short quantAlunos;
     public:
-        void setDescricao(string d);
+        void setDescricao(string);
         string getDescricao();
-        void setCodigo(string c);
+        void setCodigo(string);
         string getCodigo();
-        void setCapacidade(short cap);
+        void setCapacidade(short);
         short getCapacidade();
-        void addAluno(Aluno umAluno);
-/*         void printAlunos();
-        void deleteAluno(int m); */
+        void addAluno(Aluno);
+        Aluno getAlunoIndex(short);
+        void listaAlunos();
+//      void deleteAluno(int m);
         short getQuantAlunos();
+        Turma();
+        Turma(short);
 };
