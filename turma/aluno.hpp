@@ -1,3 +1,4 @@
+
 #include <iostream>
 
 using namespace std;
@@ -19,3 +20,5 @@ class Aluno{
         void setIdade(short i);
         Aluno();
 };
+
+#endif

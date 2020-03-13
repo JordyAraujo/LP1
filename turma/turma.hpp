@@ -1,3 +1,6 @@
+#ifndef TURMA_HPP
+#define TURMA_HPP
+
 #include "aluno.hpp"
 
 class Turma{
@@ -21,3 +24,5 @@ class Turma{
         Turma();
         Turma(short);
 };
+
+#endif
