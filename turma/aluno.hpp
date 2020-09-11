@@ -1,3 +1,5 @@
+#ifndef ALUNO_HPP
+#define ALUNO_HPP
 
 #include <iostream>
 

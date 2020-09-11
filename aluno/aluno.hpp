@@ -22,3 +22,5 @@ class Aluno{
         short getIdade();
         void setIdade(short i);
 };
+
+#endif
