@@ -38,6 +38,7 @@ ostream& operator<< (ostream &o, Tempo const t){
 }
 istream& operator>> (istream &i, Tempo &t){
 	i >> t.horas >> t.minutos >> t.segundos;
+	
 	return i;
 }
 

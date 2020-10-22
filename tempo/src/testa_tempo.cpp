@@ -23,7 +23,7 @@ int main(int argc, char const *argv[])
 
 	Tempo final; 
 
-	cout << "Tempo final: ";
+	cout << "Tempo final (formato hh mm ss): ";
 	cin >> final;
 	cout << final << endl; 
 
