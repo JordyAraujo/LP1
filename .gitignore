@@ -38,3 +38,8 @@
 
 **/build/*
 **/bin/*
+
+
+.vscode
+build
+bin
