@@ -31,10 +31,10 @@
 *.out
 *.app
 
-.vscode/*
+**/.vscode/*
 *
 !/**/
 !*.*
 
-build/*
-bin/*
+**/build/*
+**/bin/*
